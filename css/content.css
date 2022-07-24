@@ -1,0 +1,123 @@
+/* -------设置代码块的样式------- */
+.enlighter-default.enlighter-v-standard.enlighter-t-enlighter.enlighter-hover.enlighter-linenumbers.enlighter-overflow-scroll {
+  background-color: #F5F2F0;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.enlighter-t-enlighter.enlighter-linenumbers div.enlighter>div::before {
+  border-right: solid 1px #e0e0e0;
+  background-color: #F5F2F0 !important;
+}
+
+div.enlighter {
+  margin: 10px !important;
+}
+
+.enlighter-t-enlighter.enlighter-v-inline {
+  border-radius: 3px;
+  background-color: #F5F2F0 !important;
+}
+
+.enlighter-t-enlighter.enlighter-v-inline {
+  margin-left: 5px;
+  top: -2px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+/* -------滚动条相关------- */
+.enlighter-default::-webkit-scrollbar {
+  /*改变纵向滚动条宽度*/
+  height: 0px;
+  width: 10px;
+}
+
+.container-toc.enlighter-default::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.content img {
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  border-radius: .28571429rem;
+  margin: auto !important;
+  width: 100%;
+}
+
+.content p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-align: justify;
+}
+
+.post-rating p {
+  font-size: 16px;
+  text-align: center;
+}
+
+.content h1 {
+  text-align: center;
+  padding: 5px;
+  color: #D56464;
+  font-size: 25px;
+  padding-left: 8px !important;
+  margin-bottom: 35px;
+}
+
+.content h2 {
+  font-size: 22px;
+  margin-top: 45px;
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  border-bottom-color: #d2d2d2;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.content blockquote {
+  border-radius: 10px;
+  font-size: 1.4em;
+  width: 100%;
+  margin: 20px auto;
+  font-family: Open Sans;
+  color: #555;
+  padding: 15px 20px 15px 20px;
+  line-height: 1.6;
+  position: relative;
+  background: #F5F2F0;
+  text-align: justify;
+  box-shadow: 0 1px 3px 0 #d4d4d5, 0 0 0 1px #d4d4d5;
+  border-radius: .28571429rem;
+}
+
+.content blockquote::before {
+  font-family: Arial;
+  color: #D56464;
+  font-size: 3.4em;
+  position: absolute;
+  left: 15px;
+  top: -10px;
+}
+
+.content ul {
+  padding-left: 30px !important;
+  color: #939393;
+  border-radius: 8px;
+  border: solid 2px #e0e0e0;
+  padding: 15px;
+  background-color: #F5F2F0;
+  color: #777777 !important;
+}
+
+.content strong {
+  font-weight: bold;
+  padding: 1px 5px 1.5px 5px;
+  border-radius: 2px;
+  color: #d56464;
+}
+
+.page-prev-next {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
