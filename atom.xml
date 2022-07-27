@@ -6,7 +6,7 @@
   <link href="https://crossainqi.github.io/atom.xml" rel="self"/>
   
   <link href="https://crossainqi.github.io/"/>
-  <updated>2022-07-24T14:46:35.448Z</updated>
+  <updated>2022-07-27T15:14:47.663Z</updated>
   <id>https://crossainqi.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>手动部署T版openstack</title>
+    <link href="https://crossainqi.github.io/2022/07/27/%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2T%E7%89%88openstack/"/>
+    <id>https://crossainqi.github.io/2022/07/27/%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2T%E7%89%88openstack/</id>
+    <published>2022-07-27T15:04:36.000Z</published>
+    <updated>2022-07-27T15:14:47.663Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>该文档用于手动部署OpenStack Train版，可用于搭建自己的测试开发环境，同时可以根据该文档了解OpenStack的架构和相关服务功能及## 配置<br>无特殊需求推荐allinone部署，也支持多节点部署<br>环境信息<br>这里以部署allinone环境为例，既是控制节点，又是计算节点，又是存储节点。<br>allinone环境推荐配置： 16核 32G</p><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh"># hostnametest01# cat &#x2F;etc&#x2F;redhat-releaseCentOS Linux release 7.8.2003 (Core)# lscpu | grep On-lineOn-line CPU(s) list: 0-15# lsmem | grep &quot;Total online memory&quot;Total online memory: 32G# ip a1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000link&#x2F;loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00inet 127.0.0.1&#x2F;8 scope host lovalid_lft forever preferred_lft forever2: eth0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UP group default qlen 1000link&#x2F;ether fa:16:3d:2c:6c:55 brd ff:ff:ff:ff:ff:ffinet 10.249.104.7&#x2F;22 brd 10.249.107.255 scope global eth0valid_lft forever preferred_lft forever# lsblkNAME MAJ:MIN RM SIZE RO TYPE MOUNTPOINTsda 8:0 0 100G 0 disksda1 8:1 0 100G 0 part &#x2F;sdb 8:16 0 100G 0 disk<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>前期准备<br>openstack repo源<br>由于openstack的官方源和内网连接较慢，这里建议所有节点添加openstack repo源文件,具体的repo文件网上有很多大家可以自己去搜索。</p><h2 id="安装OpenStack-packages"><a href="#安装OpenStack-packages" class="headerlink" title="安装OpenStack packages"></a>安装OpenStack packages</h2><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh"># yum -y upgrade# yum install -y openstack-selinux# yum install -y python-openstackclient<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><h2 id="服务安装-amp-配置"><a href="#服务安装-amp-配置" class="headerlink" title="服务安装 &amp; 配置"></a>服务安装 &amp; 配置</h2><h3 id="控制节点"><a href="#控制节点" class="headerlink" title="控制节点"></a>控制节点</h3><h4 id="部署-mariadb"><a href="#部署-mariadb" class="headerlink" title="部署 mariadb"></a>部署 mariadb</h4><pre class="line-numbers language-sh" data-language="sh"><code class="language-sh"># mariadbyum install -y mariadb mariadb-server python2-PyMySQL# vim &#x2F;etc&#x2F;my.cnf.d&#x2F;openstack.cnf[mysqld]bind-address &#x3D; 10.249.104.7default-storage-engine &#x3D; innodbinnodb_file_per_table &#x3D; onmax_connections &#x3D; 4096collation-server &#x3D; utf8_general_cicharacter-set-server &#x3D; utf8# systemctl enable mariadb.service# systemctl start mariadb.service# root root&#x2F;rootmysql_secure_installationmysql -uroot -proot&gt; GRANT ALL PRIVILEGES ON *.* TO &#39;root&#39;@&#39;%&#39; IDENTIFIED BY &#39;root&#39;;&gt; flush privileges;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>部署 rabbimq-server</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;说明&quot;&gt;&lt;a href=&quot;#说明&quot; class=&quot;headerlink&quot; title=&quot;说明&quot;&gt;&lt;/a&gt;说明&lt;/h2&gt;&lt;p&gt;该文档用于手动部署OpenStack Train版，可用于搭建自己的测试开发环境，同时可以根据该文档了解OpenStack的架构和相关服务功</summary>
+      
+    
+    
+    
+    <category term="opernstack" scheme="https://crossainqi.github.io/categories/opernstack/"/>
+    
+    
+    <category term="openstack" scheme="https://crossainqi.github.io/tags/openstack/"/>
+    
+  </entry>
   
   <entry>
     <title>terraform module开发实践</title>

@@ -1,4 +1,7 @@
+https://crossainqi.github.io/2022/07/27/%E6%89%8B%E5%8A%A8%E9%83%A8%E7%BD%B2T%E7%89%88openstack/
 https://crossainqi.github.io/2022/07/24/terraform-module%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/
 https://crossainqi.github.io/2022/07/24/crossain/
 https://crossainqi.github.io/2022/07/24/hello-world/
 https://crossainqi.github.io/
+https://crossainqi.github.io/tags/openstack/
+https://crossainqi.github.io/categories/opernstack/
