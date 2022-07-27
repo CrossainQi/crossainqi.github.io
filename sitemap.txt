@@ -1,4 +1,4 @@
-https://github.com/CrossainQi/2022/07/24/terraform-module%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/
-https://github.com/CrossainQi/2022/07/24/crossain/
-https://github.com/CrossainQi/2022/07/24/hello-world/
-https://github.com/CrossainQi
+https://crossainqi.github.io/2022/07/24/terraform-module%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/
+https://crossainqi.github.io/2022/07/24/crossain/
+https://crossainqi.github.io/2022/07/24/hello-world/
+https://crossainqi.github.io/

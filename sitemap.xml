@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://github.com/CrossainQi/2022/07/24/terraform-module%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</loc>
+    <loc>https://crossainqi.github.io/2022/07/24/terraform-module%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5/</loc>
     
     <lastmod>2022-07-24</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/CrossainQi/2022/07/24/crossain/</loc>
+    <loc>https://crossainqi.github.io/2022/07/24/crossain/</loc>
     
     <lastmod>2022-07-24</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://github.com/CrossainQi/2022/07/24/hello-world/</loc>
+    <loc>https://crossainqi.github.io/2022/07/24/hello-world/</loc>
     
     <lastmod>2022-07-24</lastmod>
     
@@ -30,8 +30,8 @@
   
 
   <url>
-    <loc>https://github.com/CrossainQi</loc>
-    <lastmod>2022-07-25</lastmod>
+    <loc>https://crossainqi.github.io/</loc>
+    <lastmod>2022-07-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
